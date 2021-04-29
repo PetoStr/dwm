@@ -71,6 +71,7 @@ static const char *brup5[]    = { "light", "-A", "5", NULL };
 static const char *brdown[]   = { "light", "-U", "1", NULL };
 static const char *brdown5[]  = { "light", "-U", "5", NULL };
 static const char *maim[]     = { "dmenu-mmaim", NULL };
+static const char *maim_acb[] = { "mmaim", "area-clipboard", NULL };
 static const char *dsys[]     = { "dmenu-system", NULL };
 static const char *browser[]  = { "firefox", NULL };
 static const char *prntscr[]  = { "mmaim", "all", NULL };
@@ -123,6 +124,7 @@ static Key keys[] = {
 	{ ShiftMask,         XF86XK_MonBrightnessDown, spawn, {.v = brdown5 } },
 	{ 0,                 XK_Print,                 spawn, {.v = prntscr } },
 	{ ShiftMask,         XK_Print,                 spawn, {.v = maim    } },
+	{ ControlMask,       XK_Print,                 spawn, {.v = maim_acb} },
 	{ MODKEY,            XK_Escape,                spawn, {.v = dsys    } },
 	{ MODKEY,            XK_b,                     spawn, {.v = browser } },
 };
